@@ -24,7 +24,7 @@ Alpine linux 小内存版： UML 的系统是 Alpine linux ，需要 64M 内存�
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml.sh && bash uml.sh
 ```
-Centos 版： UML 的系统是 CentOS ，需要 256M 内存启动，主机建议最低 512M 内存
+Centos7 版： UML 的系统是 CentOS6.5 ，需要 256M 内存启动，主机建议最低 512M 内存
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml-centos-1.sh && bash uml-centos.sh
 ```
