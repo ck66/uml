@@ -11,7 +11,7 @@
 # Description: Start or stop the ssr server
 ### END INIT INFO
 
-# Author: hfck
+# Author: ck66
 
 name=ssr
 BIN=/root/uml-centos-64/
