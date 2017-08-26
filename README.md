@@ -20,8 +20,13 @@
 VPS必须支持并开启TUN/TAP
 
 # 一键运行脚本
+Alpine linux 小内存版： UML 的系统是 Alpine linux ，需要 64M 内存启动，主机最低 128M 内存
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/uml/master/bbr/uml.sh && bash uml.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml.sh && bash uml.sh
+```
+Centos 版： UML 的系统是 CentOS ，需要 256M 内存启动，主机建议最低 512M 内存
+```
+wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml-centos-1.sh && bash uml-centos.sh
 ```
 装完ssr和bbr就已经运行了，如果你不想改密码和端口的话就可以直接用。。默认配置在下面。。
 # UML相关说明
