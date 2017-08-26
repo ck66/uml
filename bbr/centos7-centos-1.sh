@@ -81,6 +81,10 @@ echo "/bin/bash ${cur_dir}/run.sh start" >> /etc/rc.d/rc.local
 sed -i "s/exit 0/ /ig" /etc/rc.local
 
 chmod +x /etc/rc.d/rc.local
+
+#下载服务文件，添加到系统服务，并随机启动
+wget --no-check-certificate https://raw.githubusercontent.com/
+
 umlstatus=$(ps aux | grep vmlinux)
 if [ "$umlstatus" == "" ]; then
 	echo "some thing error!"
