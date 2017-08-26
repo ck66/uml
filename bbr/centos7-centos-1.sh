@@ -9,16 +9,15 @@ export PATH
 #   Intro:  https://www.91yun.org                                 #
 #=================================================================#
 
-
-
-
 yum install -y tunctl uml-utilities screen
 
-
+#下载uml版centos6
 wget http://www.hfck.tk/uml-centos-64.tar.gz
 tar zfvx uml-centos-64.tar.gz
 cd uml-centos-64
 cur_dir=`pwd`
+
+#创建run.sh，并赋予执行权限
 cat > run.sh<<-EOF
 #!/bin/sh
 export HOME=/root
@@ -70,21 +69,28 @@ esac
 exit
 EOF
 
+chmod +x run.sh
+
 #创建和uml的共享目录
 mkdir -p /root/umlshare
 
-
-chmod +x run.sh
+#启动uml系统和ssr服务
 bash run.sh start
 
+#添加bash run.sh start到rc.local
 echo "/bin/bash ${cur_dir}/run.sh start" >> /etc/rc.d/rc.local
 sed -i "s/exit 0/ /ig" /etc/rc.local
-
 chmod +x /etc/rc.d/rc.local
 
 #下载服务文件，添加到系统服务，并随机启动
-wget --no-check-certificate https://raw.githubusercontent.com/
+wget --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/ssr -O /etc/init.d/ssr
+cp /etc/init.d/ssr /bin/
+chmod +x /etc/init.d/ssr
+chmod +x /bin/ssr
+chkconfig --add ssr
+chkconfig ssr on
 
+#验证安装是否成功
 umlstatus=$(ps aux | grep vmlinux)
 if [ "$umlstatus" == "" ]; then
 	echo "some thing error!"
