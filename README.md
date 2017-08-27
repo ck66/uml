@@ -26,7 +26,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master
 ```
 Centos7 版： UML 的系统是 CentOS6.5 ，需要 256M 内存启动，主机建议最低 512M 内存
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml-centos-1.sh && bash uml-centos.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/ck66/uml/master/bbr/uml-centos-1.sh && bash uml-centos-1.sh
 ```
 装完ssr和bbr就已经运行了，如果你不想改密码和端口的话就可以直接用。。默认配置在下面。。
 # UML相关说明
