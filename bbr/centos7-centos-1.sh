@@ -12,7 +12,7 @@ export PATH
 yum install -y tunctl uml-utilities screen
 
 #下载uml版centos6
-wget http://blog.ck66.win/uml-centos-64.tar.gz
+wget http://blog.hfck.tk/uml-centos-64.tar.gz
 tar zfvx uml-centos-64.tar.gz
 cd uml-centos-64
 cur_dir=`pwd`
