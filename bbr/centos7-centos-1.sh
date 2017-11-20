@@ -13,11 +13,11 @@ yum install -y tunctl uml-utilities screen
 
 #下载uml版centos6
 wget http://hfck.tk/uml-centos-64.tar.gz
-#http://blog.hfck.tk/uml-centos-64.tar.gz 00066+cloudfare
-#http://go.hfck.tk/uml-centos-64.tar.gz 00088+cloudfare
-#http://hfck.tk/uml-centos-64.tar.gz zly+cloudfare
+#http://blog.hfck.tk/uml-centos-64.tar.gz 00066+cloudflare
+#http://go.hfck.tk/uml-centos-64.tar.gz 00088+cloudflare
+#http://hfck.tk/uml-centos-64.tar.gz zly+cloudflare
 #http://zblog.ck66.xin/uml-centos-64.tar.gz zly+tencent
-#https://hlck.tk/uml-centos-64.tar.gz zly+cloudfare
+#https://hlck.tk/uml-centos-64.tar.gz zly+cloudflare
 tar zfvx uml-centos-64.tar.gz
 cd uml-centos-64
 cur_dir=`pwd`
